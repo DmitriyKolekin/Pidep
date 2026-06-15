@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/Настройки.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки</title>
+</head>
+<body>
+    <div class="bar">
+        <hr id="bar-line">
+        <div id="active"></div>
+        <a href="Настройки.html">
+            <button class="button_setting"><img id="settings" src="../images/Шестеренка.svg" alt="Настройки"></button>
+        </a>
+        <a href="Акции.html">
+            <button class="button_prom"><img id="promotion" src="../images/Акции.svg" alt="Акции"></button>
+        </a>
+        <a href="Магазин.html">
+            <button class="button_shop"><img id="shop" src="../images/Магазин.svg" alt="Магазин"></button>
+        </a>
+        <a href="Новости.html">
+            <button class="button_news"><img id="news" src="../images/Новости.svg" alt="Новости"></button>
+        </a>
+        <a href="Игры.html#slottext">
+            <button class="button_slot"><img id="slot" src="../images/Слоты.svg" alt="Слоты"></button>
+        </a>
+        <a href="Игры.html#cardtext">
+            <button class="button_card"><img id="card" src="../images/Карты.png" alt="Карточные игры"></button>
+        </a>
+        <a href="Игры.html#roulettetext">
+            <button class="button_roulette"><img id="roulette" src="../images/Рулетка.svg" alt="Рулетка"></button>
+        </a>
+        <a href="Игры.html#gametext">
+            <button class="button_game"><img id="game" src="../images/Джойстик.svg" alt="Game"></button>
+        </a>
+        <a href="Игры.html#streamtext">
+            <button class="button_stream"><img id="stream" src="../images/Stream игры.svg" alt="Stream игры"></button>
+        </a>
+        <a href="FAQ.html">
+            <button class="button_support"><img id="support" src="../images/Поддержка.svg" alt="Помощь"></button>
+        </a>
+    </div>
+
+    <h1 id="settingstext">Настройки</h1>
+
+    <div id="set">
+        <h1 id="securitytext">Безопасность</h1>
+        <p id="changepassword">Сменить пароль</p>
+        <input id="oldpass" type="text" placeholder="Старый пароль">
+        <input id="newpass" type="text" placeholder="Новый пароль">
+        <input id="repeatpass" type="text" placeholder="Подтвердите новый пароль">
+        <button id="confirm">Сохранить изменения</button>
+
+        <h1 id="verificationtext">Верификация</h1>
+        <div id="verification1">
+            <h1 class="head">Подтверждение личности</h1>
+            <input id="personality" type="file" hidden/>  
+            <label for="real-input" class="custom-file-upload">Загрузить файл</label>  
+            <p>Загрузи фото любого документа, удостоверяющего личность.</p>
+        </div>
+
+        <div id="verification2">
+            <h1 class="head">Селфи с документом</h1>
+            <input id="real-input" type="file" hidden/>
+            <label for="real-input" class="custom-file-upload">Загрузить файл</label>
+            <p>Загрузи одно селфи с главным разворотом паспорта.</p>
+        </div>
+
+        <div id="verification3">
+            <h1 class="head">Подтверждение платежных методов</h1>
+            <input id="payment" type="file" hidden/>  
+            <label for="real-input" class="custom-file-upload">Загрузить файл</label>  
+            <p>Загрузи изображения всех используемых платежных средств.</p>
+        </div>
+
+        <h1 id="notificationtext">Уведомления</h1>
+        <h2 id="chanel">Каналы коммуникации</h2>
+        <p id="chaneltext">Выбери удобные способы получения важных уведомлений.</p>
+
+        <div id="not1" class="toggle-container">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">E-mail</span>
+        </div>
+
+        <div id="not2" class="toggle-container">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">СМС-уведомления</span>
+        </div>
+
+        <div id="not3" class="toggle-container">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Push-уведомления</span>
+        </div>
+    </div>
+
+    <div id="Buttons">
+        <a class="b" href="#securitytext"><button id="linksecurity">Безопасность</button></a>
+        <br><br>
+        <a class="b" href="#verificationtext"><button id="linkverification">Верификация</button></a>
+        <br><br>
+        <a class="b" href="#notificationtext"><button id="linknotification">Уведомления</button></a>
+    </div>
+
+    <a id="ahome" href="Pidep.html">
+        <button id="home"><img src="../images/Home.svg" alt="Домой"></button>
+    </a>
+
+    <div class="logo">
+        <img src="../images/Лого.png" alt="Логотип">
+    </div>
+
+    <!-- Футер -->
+    <a id="a" href="#">Контакты</a>
+    <a id="b" href="#">О нас</a>
+    <a id="c" href="#">Антиблокировка</a>
+    <a id="d" href="#">Политика проверки клиентов</a>
+    <a id="e" href="#">Депозиты и выплаты</a>
+    <a id="f" href="#">Бонусы</a>
+    <a id="g" href="FAQ.html">Faq</a>
+    <a id="h" href="#">Политика ответственной игры</a>
+    <a id="i" href="#">Правила и условия</a>
+    <a id="j" href="#">Пользовательское соглашение</a>
+    <a id="k" href="#">Партнерская программа</a>
+    <a id="l" href="#">Политика AML и KYC</a>
+</body>
+</html>

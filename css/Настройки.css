@@ -1,0 +1,723 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+    color:white;
+    border: none;
+}
+body {
+    position: relative;
+    min-height: 100vh; 
+    background-color: #0F1A3D;
+    height: 3400px; 
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+  }
+  
+  .toggle-label {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+#not1, #not2, #not3{
+    position: absolute;
+    top: 2170px;
+}
+#not1{
+    left: 100px
+}
+#not2{
+    left: 600px;
+}
+#not3{
+    top: 2270px;
+    left: 100px;
+}
+#not4, #not5, #not6, #not7{
+    position: absolute;
+    left: 100px;
+    top: 2450px;
+}
+#not5{
+    left: 600px;
+}
+#not6{
+    top: 2550px;
+}
+#not7{
+    left: 600px;
+    top: 2550px;
+}
+p{
+    text-indent: 30px;
+}
+#set{
+    position: absolute;
+    background-color: rgb(39, 39, 48);
+    top: 280px;
+    left: 370px;
+    width: 1200px;
+    height: 2800px;
+    border-radius: 50px;
+}
+#Buttons{
+    position: absolute;
+    top: 300px;
+}
+#linksecurity,
+#linkverification,
+#linknotification{
+    position: fixed;
+    left: 150px;
+    background-color: #1a3079;
+    border: 2px solid black;
+    width: 200px;
+    height: 40px;
+    z-index: 10;
+}
+#linksecurity:hover,
+#linkverification:hover,
+#linknotification:hover{
+    background-color: #354ea1;
+}
+#securitytext, #verificationtext, #notificationtext{
+    position: absolute;
+    font-size: 40px;
+    font-weight: 700;
+    top: 40px;
+    left: 40px;
+}
+#verificationtext{
+    top: 450px;
+}
+#notificationtext{
+    top: 2030px;
+}
+#settingstext{
+    position: absolute;
+    font-size: 50px;
+    font-weight: 700;
+    top: 170px;
+    left: 825px;
+}
+#chanel, #spam{
+    position: absolute;
+    top: 2090px;
+    left: 40px;
+}
+#chaneltext, #spamtext{
+    position: absolute;
+    color: darkgray;
+    font-size: 16px;
+    top: 2130px;
+    left:10px;
+}
+#spam{
+    top: 2360px;
+}
+#spamtext{
+    top: 2400px;
+}
+#changepassword{
+    position: absolute;
+    left: 45px;
+    top: 110px;
+    font-size: 25px;
+}
+#oldpass, #newpass, #repeatpass{
+    width: 200px;
+    height: 35px;
+    width: 360px;
+    left: 160px;
+    top: 180px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: #000000;    
+    background-color: #1a3079;
+    position: absolute;
+}
+#oldpass::placeholder, #newpass::placeholder, #repeatpass::placeholder{
+    color: rgb(211, 211, 211);
+}
+#newpass{
+    left: 610px;
+}
+#repeatpass{
+    top: 260px;
+}
+#confirm{
+    position: absolute;
+    width: 230px;
+    height: 40px;
+    border-radius: 15px;
+    top: 350px;
+    left: 450px;
+    background-color: #3B82F6;
+}
+#confirm:hover{
+    background-color: #1871ff;
+}
+#verification1, #verification2, #verification3{
+    position: absolute;
+    border-radius: 20px;
+    padding: 40px;
+    width: 900px;
+    height: auto;
+    top: 550px;
+    left: 60px;
+    background-color: #0F1A3D;
+    border: none;
+}
+#verification2{
+    top: 1035px;
+}
+#verification3{
+    top:1500px;
+}
+#verification1 p, #verification2 p , #verification3 p{
+    font-size: 16px;
+    font-weight: 600;
+    color: darkgray;
+}
+.head{
+    font-size: 40px;
+    font-weight: 700;
+}
+#real-input {
+    background-color: #000000;
+    content: "Вставить фото";
+    height: 100px;
+}
+
+.custom-file-upload { 
+    display: inline-block; 
+    width: 300px;
+    height: 70px;
+    font-size: 35px;
+    text-align: center;
+    color: black; 
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-left: 100px;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+.custom-file-upload:hover {
+    background-color: #98b8ff;
+}
+li{
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: darkgray;
+}
+b{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#bal{
+    position: absolute;
+    left: 1450px;
+    background-color: transparent;
+    width: 30px;
+    color: white;
+    top: 33px;
+    font-size: 31px;
+    font-weight: 600;
+    border: none;
+    z-index: 1000; 
+}
+#bal:hover{
+    color: #3B82F6;
+}
+.bar {
+    height: 870px;
+    width: 86px;
+    background-color: #3e6ce9;
+    border-radius: 50px;
+    float: left;
+    margin-top: 35px;
+    margin-left: 38px;
+    position: fixed;
+
+}
+#active{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #98b8ff;
+    width: 86px;
+    height: 85px;
+    border-top-left-radius: 49px;
+    border-top-right-radius: 49px;
+    border: none;
+}
+#bar-line {
+    position: absolute;
+    top: 353px;
+    width: 100%; 
+    height: 2px;
+    background-color: #000000;
+    
+}
+#settings, 
+#promotion,
+#shop, 
+#news, 
+#slot, 
+#card, 
+#roulette, 
+#game,
+#stream, 
+#support {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all 0.3s ease;
+}
+.button_setting,
+.button_shop,
+.button_news,
+.button_prom,
+.button_slot,
+.button_card,
+.button_roulette,
+.button_game,
+.button_stream,
+.button_support{
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+}
+.button_card::after,
+.button_game::after,
+.button_news::after,
+.button_prom::after,
+.button_roulette::after,
+.button_setting::after,
+.button_shop::after,
+.button_slot::after,
+.button_stream::after,
+.button_support::after {
+border: 2px solid #3B82F6;
+background: rgba(0, 0, 0, 0.9);
+color: rgb(255, 255, 255);
+border-radius: 8px;
+font-size: 14px;
+font-family: Arial, sans-serif;
+white-space: nowrap;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+z-index: 100;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+align-content: center;
+position: absolute;
+}
+.button_shop:hover::after, 
+.button_news:hover::after,
+.button_prom:hover::after,
+.button_shop:hover::after,
+.button_slot:hover::after,
+.button_roulette:hover::after,
+.button_card:hover::after,
+.button_game:hover::after,
+.button_stream:hover::after,
+.button_support:hover::after
+  {
+    opacity: 1;
+    visibility: visible;
+}
+#promotion:hover,
+#shop:hover, 
+#news:hover,
+#slot:hover, 
+#card:hover, 
+#roulette:hover, 
+#game:hover, 
+#stream:hover, 
+#support:hover {
+    filter: 
+        drop-shadow(0 0 10px rgba(255, 255, 255, 0.9))
+        drop-shadow(0 0 13px rgba(255, 255, 255, 0.8))
+        drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+    transform: scale(1.1) rotate(15deg); 
+}
+.button_setting {
+    top: 20px;
+    left: 13px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+}
+.button_setting::after {
+    content: "Настройки";
+    left:80px;
+    top: 50%;
+    width: 90px;
+    height: 30px;
+    transform: translateY(-50%);
+}
+.button_setting:hover::after {
+    left: 85px;
+}
+.button_prom {
+    top: 98px; 
+    left: 13px; 
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+}
+.button_prom::after {
+    content: "Акции";
+    left: 80px; 
+    top: 100%;
+    width: 60px;
+    height: 30px;
+    transform: translateY(-150%); 
+}
+.button_prom:hover::after {
+    left: 85px; 
+}
+.button_shop{
+    top: 180px;
+    left: 14px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+}
+.button_shop::after{
+    content: "Магазин";
+    width: 70px;
+    height: 30px;
+    top: 100%;
+    left: 80px;
+    transform: translateY(-150%);
+}
+.button_shop:hover::after {
+    left: 85px; 
+}
+.button_news {
+    top: 256px; 
+    left: 9px; 
+    width: 71px;
+    height: 73px;
+    z-index: 10;
+}
+.button_news::after {
+    content: "Новости";
+    left: 85px; 
+    top: 100%;
+    width: 80px;
+    height: 30px;
+    transform: translateY(-150%); 
+}
+.button_news:hover::after {
+    left: 90px; 
+}
+.button_slot {
+    top: 380px; 
+    left: 14px; 
+    width: 58px;
+    height: 58px;
+    z-index: 10;
+}
+.button_slot::after {
+    content: "Слоты";
+    left: 80px; 
+    top: 100%;
+    width: 80px;
+    height: 30px;
+    transform: translateY(-150%); 
+}
+.button_slot:hover::after {
+    left: 85px; 
+}
+.button_card {
+    top: 460px; 
+    left: 14px; 
+    width: 60px;
+    height: 55px;
+    z-index: 10;
+}
+.button_card::after {
+    content: "Карты";
+    left: 80px; 
+    top: 100%;
+    width: 80px;
+    height: 30px;
+    transform: translateY(-150%); 
+}
+.button_card:hover::after {
+    left: 85px; 
+}
+.button_roulette {
+    top: 526px; 
+    left: 9px; 
+    width: 70px;
+    height: 70px;
+    z-index: 10;
+}
+.button_roulette::after {
+    content: "Рулетки";
+    left: 85px; 
+    top: 100%;
+    width: 80px;
+    height: 30px;
+    transform: translateY(-170%); 
+}
+#roulette:hover{
+    animation-name: twist;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear
+}
+.button_roulette:hover::after {
+    left: 90px; 
+}
+@keyframes twist {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(180deg);}
+}
+.button:hover #settings {
+    animation: twist 1.5s linear infinite;
+}
+.button_game {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 610px; 
+    left: 14px; 
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+}
+.button_game::after {
+    content: "Game";
+    left: 80px; 
+    top: 100%;
+    width: 80px;
+    height: 30px;
+    transform: translateY(-150%);  
+}
+
+.button_game:hover::after {
+    left: 85px; 
+}
+.button_stream {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 680px; 
+    left: 16px; 
+    width: 57px;
+    height: 57px;
+    z-index: 10;
+}
+.button_stream::after {
+    content: "Стрим-игры";
+    left: 80px; 
+    top: 100%;
+    width: 100px;
+    height: 30px;
+    transform: translateY(-140%);   
+}
+.button_stream:hover::after {
+    left: 85px; 
+}
+.button_support {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 784px; 
+    left: 8px; 
+    width: 70px;
+    height: 70px;
+    z-index: 10;
+}
+.button_support::after {
+    content: "Помощь";
+    left: 88px; 
+    top: 100%;
+    width: 80px;
+    height: 30px;
+    transform: translateY(-150%); 
+}
+.button_support:hover::after {
+    left: 93px;
+}
+
+.logo img{
+    position: absolute;
+    width: 300px;
+    left: 209px;
+    top: 0px;
+}
+.search{
+    position: absolute;
+    width: 600px;
+    height: 40px;
+    background: none;
+    border-radius: 50px;
+    border: 3px solid rgba(0, 255, 0, 0.3);
+}
+#search{
+    position: absolute;
+    top: 146px;
+    left: 680px;
+}
+
+
+#registration{
+    position: absolute;
+    text-align: center;
+    left: 1560px;
+    top:37px;
+    width: 170px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid #134dac;
+    background-color: #3B82F6;
+    z-index: 100;
+}
+#autification{
+    position: absolute;
+    text-align: center;
+    left: 1752px;
+    top:37px;
+    width: 91px;
+    height: 40px;
+    border-radius: 50px;
+    border: 2px solid #3B82F6;
+    background-color:#134dac;
+    z-index: 100;
+}
+
+#registration:hover, #autification:hover {
+    border: 2px solid white;
+}
+#home{
+    position: absolute;
+    left: 920px;
+    top: 36px;
+    background-color: none;
+    background-color: transparent;
+    border: none;
+}
+#home:hover{
+    transform: scale(1.1);
+    filter: 
+    drop-shadow(0 0 5px rgba(255, 255, 255, 0.7)); 
+}
+a{
+    text-decoration: none;
+    color: darkgray;
+    position: absolute;
+    font-size: 10px;
+}
+#a{
+    bottom: 70px;
+    left:600px;    
+}
+#b{
+    bottom: 70px;
+    left:1030px;
+}
+#c{
+    bottom: 70px;
+    left:1360px;
+}
+#d{
+    bottom: 50px;
+    left:600px;
+}
+#e{
+    bottom: 50px;
+    left:1030px;
+}
+#f{
+    bottom: 50px;
+    left:1360px;
+}
+#g{
+    bottom: 30px;
+    left:600px;
+}
+#h{
+    bottom: 30px;
+    left:1030px;
+}
+#i{
+    bottom: 30px;
+    left:1360px;
+}
+#j{
+    bottom: 10px;
+    left:600px;
+}
+#k{
+    bottom: 10px;
+    left:1030px;
+}
+#l{
+    bottom: 10px;
+    left:1360px;
+}
